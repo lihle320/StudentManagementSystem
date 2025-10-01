@@ -1,48 +1,197 @@
 Student Management System
-Overview
-The Student Management System is a console application built in C# that demonstrates the use of various data structures including dictionaries and sets. The application allows for the management of student information, course codes, and class enrollment operations.
+A C# Console Application that demonstrates practical usage of collections in .NET, including Dictionaries, HashSets, and Set Operations with real student data.
 
 Features
-Dictionary Operations: Manage student records using a dictionary that maps student IDs to names.
-HashSet Operations: Store and manage unique course codes.
-Set Operations: Perform mathematical set operations on students enrolled in Math and Science classes, including intersection, union, and difference.
-Getting Started
+📚 Task 1: Student Dictionary
+Stores student ID and name pairs
+
+Demonstrates dictionary operations:
+
+Adding and retrieving students
+
+Searching by ID
+
+Uses actual student data with proper IDs
+
+🔄 Task 3: Unique Course Codes
+Implements HashSet for storing unique course codes
+
+Automatically prevents duplicate entries
+
+Shows basic set operations (Add, Remove, Contains)
+
+📊 Task 4: Set Operations
+Compares Math and Science class enrollments
+
+Demonstrates essential set operations:
+
+Intersection: Students in both classes
+
+Difference: Students only in one class
+
+Union: All unique students
+
+Symmetric Difference: Students in exactly one class
+
+Student Data
+The application uses the following student records:
+
+Student ID	Student Name
+101	Lihlethando Funde
+102	Thando Funde
+103	Lihle Funde
+104	Yemvelo Sonka
+105	Thando Brown
+Class Assignments
+Math Class
+Lihlethando Funde
+
+Thando Funde
+
+Lihle Funde
+
+Yemvelo Sonka
+
+Science Class
+Thando Funde
+
+Lihle Funde
+
+Thando Brown
+
+Yemvelo Sonka
+
 Prerequisites
-.NET SDK installed on your machine.
-A text editor or IDE (e.g., Visual Studio, Visual Studio Code).
+.NET 6.0 SDK or later
+
+Visual Studio 2022 or Visual Studio Code
+
+Basic understanding of C# programming
+
 Installation
-Clone the repository or download the source code.
-Open the solution or project file in your preferred IDE.
-Build the project to restore dependencies.
-Running the Application
-Open a terminal or command prompt.
-
-Navigate to the project directory.
-
-Run the application using the command:
+Clone or Download the Project
 
 bash
+git clone <repository-url>
+cd StudentManagementSystem
+Open in Visual Studio
 
+Open StudentManagementSystem.sln in Visual Studio
+
+Or create a new Console App and replace the contents of Program.cs
+
+Build the Solution
+
+Press Ctrl + Shift + B or use the Build menu
+
+Ensure there are no compilation errors
+
+Running the Application
+In Visual Studio:
+
+Press F5 to run with debugging
+
+Or Ctrl + F5 to run without debugging
+
+Using Command Line:
+
+bash
 dotnet run
-Follow the prompts in the console to explore the features.
+Project Structure
+text
+StudentManagementSystem/
+├── Program.cs                 # Main application file
+├── StudentManagementSystem.csproj  # Project configuration
+└── README.md                  # This file
+Code Overview
+Key Methods
+DemonstrateDictionary(): Shows dictionary operations with student data
 
-Code Structure
-The code is organized into the following main sections:
+DemonstrateHashSet(): Demonstrates unique course code storage
 
-Main Method: The entry point of the application, orchestrating the demonstration of various tasks.
-DemonstrateDictionary Method: Shows how to create and manipulate a dictionary for student records.
-DemonstrateHashSet Method: Demonstrates the usage of a HashSet for managing unique course codes.
-DemonstrateSetOperations Method: Performs various set operations on student enrollment in Math and Science classes.
-DisplaySet Method: A helper method to display the contents of a HashSet.
-Example Outputs
-The application will display outputs related to student records, unique course codes, and results of set operations, including:
+DemonstrateSetOperations(): Performs set comparisons between classes
 
-Student directories with IDs and names.
-Lists of unique course codes.
-Students enrolled in both Math and Science classes.
-Enrollment statistics and analysis.
-Contributions
-Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
+DisplaySet(): Helper method to display HashSet contents
+
+Collections Used
+Dictionary<int, string>
+
+Key: Student ID (integer)
+
+Value: Student Name (string)
+
+HashSet<string>
+
+Stores unique course codes
+
+Demonstrates automatic duplicate handling
+
+Set Operations
+
+IntersectWith(): Finds common elements
+
+ExceptWith(): Finds elements in first set only
+
+UnionWith(): Combines all unique elements
+
+SymmetricExceptWith(): Finds elements in exactly one set
+
+Expected Output
+The application will display:
+
+Student Dictionary with all student records
+
+Unique Course Codes showing automatic duplicate prevention
+
+Set Operations Results comparing class enrollments
+
+Enrollment Analysis with statistics and percentages
+
+Learning Objectives
+This project demonstrates:
+
+✅ Dictionary creation, population, and retrieval
+
+✅ HashSet for storing unique values
+
+✅ Set operations (Union, Intersection, Difference)
+
+✅ Collection iteration and display
+
+✅ Real-world data structure applications
+
+Customization
+You can easily modify:
+
+Student Data: Update the dictionary in DemonstrateDictionary()
+
+Course Codes: Change the HashSet contents in DemonstrateHashSet()
+
+Class Assignments: Modify the sets in DemonstrateSetOperations()
+
+Troubleshooting
+Common Issues
+Build Errors: Ensure .NET 6.0+ SDK is installed
+
+Runtime Errors: Check for null references in collection operations
+
+Output Formatting: Adjust console output methods as needed
+
+Dependencies
+.NET 6.0 Runtime
+
+System.Collections.Generic namespace
+
+Contributing
+Feel free to extend this project by:
+
+Adding more collection types (List, Queue, Stack)
+
+Implementing file I/O for student data
+
+Adding GUI interface
+
+Creating unit tests
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is for educational purposes. Feel free to use and modify as needed.
